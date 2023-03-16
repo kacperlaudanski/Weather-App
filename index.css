@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: rgb(49, 49, 49);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.container {
+  width: 40%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.587);
+  margin-top: 11em;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-container .search-input-bg {
+  width: 90%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 25px;
+  background-color: rgba(220, 220, 220, 0.524);
+}
+.search-container .search-input-bg input {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background-color: rgba(79, 79, 79, 0.022);
+}
+.search-container button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  background-color: rgba(220, 220, 220, 0.524);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */

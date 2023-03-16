@@ -1,0 +1,63 @@
+@mixin flex-setup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background-color: rgb(49, 49, 49); 
+    @include flex-setup; 
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.container{
+    width:40%;
+    height:400px;
+    background-color: rgba(0, 0, 0, 0.587);
+    margin-top: 11em;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding:3em; 
+    @include flex-setup;
+}
+
+.search-container{
+    width:100%; 
+    @include flex-setup;
+    justify-content: space-between;
+
+    .search-input-bg{
+        width:90%; 
+        height:40px;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 25px;
+        background-color: rgba(220, 220, 220, 0.524);
+
+        input{
+            width:95%; 
+            @include flex-setup;
+            height: 40px;
+            border-radius: 25px;
+            border:none;
+            outline: none;
+            background-color: rgba(79, 79, 79, 0.022);
+        }
+    }
+
+    button{
+        width:40px;
+        height:40px;
+        border-radius: 100%;
+        border:none;
+        background-color: rgba(220, 220, 220, 0.524);
+        cursor: pointer;
+    }
+}
