@@ -14,7 +14,7 @@ body{
     background-color: rgb(49, 49, 49); 
     @include flex-setup; 
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size:cover;
 }
 
 .container{

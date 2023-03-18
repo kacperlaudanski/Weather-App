@@ -7,7 +7,7 @@ const humidity = document.querySelector('.humidity');
 const windSpeed = document.querySelector('.wind-speed');  
 
 async function getBackgroundImage(){
-    const res = await fetch('https://picsum.photos/1920/768?grayscale');
+    const res = await fetch('https://source.unsplash.com/random/?city,night');
     const blob = await res.blob(); 
     const url = await URL.createObjectURL(blob); 
     document.body.style.backgroundImage = `url(${url})`
@@ -35,5 +35,6 @@ function assignData(data){
 
 searchButton.addEventListener('click', () => {
     getWeather(searchBar.value);
+    getBackgroundImage(); 
 })
  
