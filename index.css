@@ -15,7 +15,7 @@ body {
 
 .container {
   width: 40%;
-  height: 400px;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.587);
   margin-top: 11em;
   border-radius: 20px;
@@ -24,16 +24,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
-
-.search-container {
+.container .search-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
 }
-.search-container .search-input-bg {
+.container .search-container .search-input-bg {
   width: 90%;
   height: 40px;
   display: flex;
@@ -41,7 +42,7 @@ body {
   border-radius: 25px;
   background-color: rgba(220, 220, 220, 0.524);
 }
-.search-container .search-input-bg input {
+.container .search-container .search-input-bg input {
   width: 95%;
   display: flex;
   justify-content: center;
@@ -52,13 +53,56 @@ body {
   outline: none;
   background-color: rgba(79, 79, 79, 0.022);
 }
-.search-container button {
+.container .search-container .search-input-bg input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  content: url(public/close.png);
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  margin-right: 1em;
+}
+.container .search-container button {
   width: 40px;
   height: 40px;
   border-radius: 100%;
   border: none;
   background-color: rgba(220, 220, 220, 0.524);
   cursor: pointer;
+}
+.container .weather-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  margin-top: 2em;
+}
+.container .weather-container .weather-description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.container .weather-container .weather-description .celsius {
+  font-size: 2rem;
+}
+.container .weather-container .weather-description .temp {
+  font-size: 2.5rem;
+}
+.container .weather-container .weather-description .additional-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1em;
+  line-height: 2em;
 }
 
 /*# sourceMappingURL=index.css.map */

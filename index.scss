@@ -19,45 +19,92 @@ body{
 
 .container{
     width:40%;
-    height:400px;
+    height:auto;
     background-color: rgba(0, 0, 0, 0.587);
     margin-top: 11em;
     border-radius: 20px;
     box-sizing: border-box;
     padding:3em; 
     @include flex-setup;
-}
+    justify-content: flex-start;
+    flex-direction: column;
 
-.search-container{
-    width:100%; 
-    @include flex-setup;
-    justify-content: space-between;
-
-    .search-input-bg{
-        width:90%; 
-        height:40px;
-        display: flex;
-        justify-content: flex-end;
-        border-radius: 25px;
-        background-color: rgba(220, 220, 220, 0.524);
-
-        input{
-            width:95%; 
-            @include flex-setup;
-            height: 40px;
+    .search-container{
+        width:100%; 
+        @include flex-setup;
+        justify-content: space-between;
+    
+        .search-input-bg{
+            width:90%; 
+            height:40px;
+            display: flex;
+            justify-content: flex-end;
             border-radius: 25px;
+            background-color: rgba(220, 220, 220, 0.524);
+    
+            input{
+                width:95%; 
+                @include flex-setup;
+                height: 40px;
+                border-radius: 25px;
+                border:none;
+                outline: none;
+                background-color: rgba(79, 79, 79, 0.022);
+            }
+
+            input::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+                content: URL(public/close.png);
+                cursor: pointer;
+                width:10px; 
+                height:10px;
+                margin-right: 1em;
+               }
+        }
+    
+        button{
+            width:40px;
+            height:40px;
+            border-radius: 100%;
             border:none;
-            outline: none;
-            background-color: rgba(79, 79, 79, 0.022);
+            background-color: rgba(220, 220, 220, 0.524);
+            cursor: pointer;
         }
     }
 
-    button{
-        width:40px;
-        height:40px;
-        border-radius: 100%;
-        border:none;
-        background-color: rgba(220, 220, 220, 0.524);
-        cursor: pointer;
+    .weather-container{
+        width:100%;
+        @include flex-setup; 
+        flex-direction: column;
+        align-items: flex-start;
+        color:#fff; 
+        margin-top: 2em;
+
+        .weather-description{
+            width:100%; 
+            @include flex-setup; 
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 1em;
+
+            .celsius{
+                font-size: 2rem;
+            }
+
+            .temp{
+               font-size: 2.5rem;
+            }
+
+            .additional-info{
+                @include flex-setup; 
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top:1em;
+                line-height: 2em;
+            }
+        }
     }
 }
+
+

@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet">
+    <link href="public/cloud (1).png" rel="shortcut icon" type="image/x-icon">
     <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/a568e3a4aa.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <main class="container">
@@ -17,11 +19,20 @@
             <div class="search-input-bg">
                 <input type="search" id="search-bar">
             </div>
-            <button type="button" id="search-button">O/</button>
+            <button type="button" id="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
         <div class="weather-container">
-            <h1 class="weather-city"></h1>
-            <div class="weather-description"></div>
+            <h1>Weather in <span class="weather-city">Tokyo</span></h1>
+            <div class="weather-description">
+                <span class="celsius"><span class="temp">9.83</span> °C</span>
+                <div class="additional-info">
+                    <span class="short-description">Broken clouds</span>
+                    <span>Humidity: <span class="humidity">62</span> %</span>
+                    <span>Wind speed: <span class="wind-speed">4.6</span> km/h</span>
+                </div>
+            </div>
         </div>
     </main>
 </body>
