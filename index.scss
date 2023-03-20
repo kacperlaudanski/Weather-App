@@ -4,6 +4,8 @@
     align-items: center;
 }
 
+$full-width: 100%; 
+
 *{
     margin:0;
     padding:0;
@@ -11,10 +13,10 @@
 }
 
 body{
-    background-color: rgb(49, 49, 49); 
     @include flex-setup; 
     background-repeat: no-repeat;
     background-size:cover;
+    transition: background-image .3s ease-in;
 }
 
 .container{
@@ -30,7 +32,7 @@ body{
     flex-direction: column;
 
     .search-container{
-        width:100%; 
+        width:$full-width;  
         @include flex-setup;
         justify-content: space-between;
     
@@ -72,16 +74,36 @@ body{
         }
     }
 
+    .loader {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin-top: 2em;
+        border-radius: 50%;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #3498db;
+        animation: spin 1s ease-in-out infinite;
+      }
+
+    .error{
+        width:$full-width; 
+        margin-top: 2em;
+        color:#fff; 
+        font-size: 2rem;
+        text-align: center;
+    }
+
     .weather-container{
-        width:100%;
+        width:$full-width;
         @include flex-setup; 
         flex-direction: column;
         align-items: flex-start;
         color:#fff; 
         margin-top: 2em;
+        transition: display .3s ease-in;
 
         .weather-description{
-            width:100%; 
+            width:$full-width; 
             @include flex-setup; 
             flex-direction: column;
             align-items: flex-start;
@@ -105,6 +127,26 @@ body{
             }
         }
     }
+
+    .hidden{
+        display:none; 
+      }
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+@keyframes ease-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+ 
 
 

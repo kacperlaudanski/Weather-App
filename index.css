@@ -5,12 +5,12 @@
 }
 
 body {
-  background-color: rgb(49, 49, 49);
   display: flex;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: background-image 0.3s ease-in;
 }
 
 .container {
@@ -69,6 +69,23 @@ body {
   background-color: rgba(220, 220, 220, 0.524);
   cursor: pointer;
 }
+.container .loader {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-top: 2em;
+  border-radius: 50%;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  animation: spin 1s ease-in-out infinite;
+}
+.container .error {
+  width: 100%;
+  margin-top: 2em;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
 .container .weather-container {
   width: 100%;
   display: flex;
@@ -78,6 +95,7 @@ body {
   align-items: flex-start;
   color: #fff;
   margin-top: 2em;
+  transition: display 0.3s ease-in;
 }
 .container .weather-container .weather-description {
   width: 100%;
@@ -103,6 +121,26 @@ body {
   align-items: flex-start;
   margin-top: 1em;
   line-height: 2em;
+}
+.container .hidden {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ease-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
