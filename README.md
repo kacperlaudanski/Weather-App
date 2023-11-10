@@ -14,3 +14,5 @@ WeatherApp is a **Javascript-based** web application styled with **SCSS**, desig
 
 To use the WeatherApp, simply enter the desired location in the search bar. The app will then fetch and display the latest weather information along with a captivating random background image. 
 
+## Screenshoot
+<img width="1229" alt="Zrzut ekranu 2023-11-10 o 20 06 17" src="https://github.com/kacperlaudanski/Weather-App/assets/107647375/2872a361-9a3a-4500-a6bf-041e0298ad21">
